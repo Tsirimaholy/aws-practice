@@ -6,3 +6,16 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       BucketName: STD21030
+
+  BucketSSM:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /std21030/bucketName
+      Type: String
+      Value: !Ref Bucket
+  BucketARNSSM:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /std21030/bucketARN
+      Type: String
+      Value: !GetAtt Bucket.Arn
