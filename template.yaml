@@ -5,7 +5,7 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
-      BucketName: STD21030
+      BucketName: std21030
 
   BucketSSM:
     Type: AWS::SSM::Parameter
